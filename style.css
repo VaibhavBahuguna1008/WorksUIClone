@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Freight Big Pro";
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#loader{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 99;
+
+
+} 
+#yellow1{
+    height: 100vh;
+    width: 100%;
+    background-color: #F5E41B;
+    position: absolute;
+    z-index: 9;
+}
+#yellow2{
+    height: 100vh;
+    width: 100%;
+    background-color: #F5E41B;
+    position: absolute;
+    z-index: 7;
+}
+
+
+#loader video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 6;
+}
+#loader h1{
+    color: white;
+    font-weight: 300;
+    font-size: 6.8vw;
+    line-height: 5vw;
+    position: relative;
+    z-index: 8;
+}
+#nav{
+    position: absolute;
+    width: 100%;
+    padding: 30px 40px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+   
+}
+#nav svg path{
+    fill: #000;
+   
+}
+.nav-right{
+    display: flex;
+    gap: 30px;
+}
+.nav-right h2{
+    font-family: "gilroy";
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.nav-right i{
+    font-size: 20px;
+}
+/* .sidebar{
+    position: absolute;
+    height: 150vh;
+    width: 150vh;
+    background-color: rgba(250, 250, 250, 0.564);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1);
+    top: 50%;
+    left: -75vh;
+    transform: translate(130%, -50%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    z-index: 999;
+    flex-direction: column;
+    text-align: end;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 20px;
+    display: none;
+    transition: all ease 0.5s;
+} */
+/* .stripe{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 60px;
+    background-color: red;
+} */
+/* .sidebar h2{
+    font-family: "gilroy";
+    font-size: 20px;
+}
+.sidebar i{
+    font-size: 20px;
+} */
+#main{
+    background: #000;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #F5E41B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#page1 h1{
+    font-weight: 300;
+    font-size: 6.8vw;
+    line-height: 5vw;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+}
+.elem{
+    
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+.elem .blur{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(0);
+    width: 40%;
+    height: 25px;
+    z-index: 8;
+    background: linear-gradient(#F5E41B , #F5E41B , #f5e31bd7);
+    transition: all ease 0.5s;
+    box-shadow: 20px 0px 20px  #F5E41B, -20px 0px 10px  #F5E41B;
+}
+.elem h2{
+    font-size: 6.8vw;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: white;
+    position: relative;
+    z-index: 9;
+    line-height: 5vw;
+    transition: all ease 0.5s;
+    
+    
+}
+.elem .moving{
+
+
+    background-color: #F5E41B;
+    white-space: nowrap;
+    padding: 8px 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -45%) scaleY(0);
+    transition: all ease 0.5s;
+    
+}
+.elem .moving .moving-in{
+    
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+.elem .moving .moving-in h5{
+    font-size: 15px;
+    color: #000;
+    display: inline-block;
+    font-family: "gilroy";
+    text-transform: uppercase;
+    margin-right: 30px;
+    
+
+}
+.elem:hover .moving{
+    transform: translate(0, -45%) scaleY(1);
+}
+.elem:hover h2{
+    font-style: italic;
+}
+.elem:hover .blur{
+    transform: translate(-50%, -50%) scaleY(1);
+}
+#page3{
+    
+    width: 100%;
+    background-color: white;
+
+    
+}
+
+.img-container{
+    padding: 25px 25px;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.img-div{
+    height: 70vh;
+    width: 472px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 28px;
+}
+.img-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: all ease 0.3s;
+    opacity: 0;
+    z-index: 9;
+    
+}
+.overlay p{
+    font-size: 6vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: 100;
+
+
+}
+.img-div:hover .overlay{
+    opacity: 1;
+}
+
+.img-div:hover .img{
+    transform: scale(1.2);
+}
+@keyframes moving {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.line:nth-child(1) .img-div:nth-child(2){
+    height: 80vh;
+}
+.line:nth-child(1) .img-div:nth-child(1){
+    height: 50vh;
+}
+
+
+.line:nth-child(2) .img-div:nth-child(2){
+    height: 90vh;
+}
+.line:nth-child(2) .img-div:nth-child(1){
+    height: 60vh;
+}
+
+
+.line:nth-child(3) .img-div:nth-child(2){
+    height: 85vh;
+}
+.line:nth-child(3) .img-div:nth-child(1){
+    height: 55vh;
+}
+
+#footer{
+    height: 35vh;
+    width: 100%;
+    background: white;
+    cursor: pointer;
+}
+
+.footer1{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.footer1 h1{
+    font-family: "gilroy";
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 17px;
+
+}
+.footer1 i{
+    font-size: 20px;
+    
+}
+.footer2{
+    height: 15vh;
+    width: 100%;
+    color: white;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vw;
+}
+.footer2 h1{
+    font-family: "gilroy";
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+}
+.social{
+    display: flex;
+    gap: 30px;
+}
+@media screen and (max-width: 480px) {
+    .img-container{
+        padding: 10px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+    .img-div{
+        height: 40vh;
+        width: 95vw;
+        position: relative;
+        overflow: hidden;
+    
+
+    }
+  }
